@@ -5,7 +5,7 @@ class CreateTransfers < ActiveRecord::Migration
 
       t.integer :from_account_id
       t.integer :to_account_id
-      t.integer :amount
+      t.integer :amount_cents
     end
   end
 end

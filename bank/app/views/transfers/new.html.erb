@@ -1,0 +1,18 @@
+<% @transfer.errors.full_messages.each do |full_message| %>
+  <%= full_message %> <br />
+<% end %>
+
+<br />
+
+<%= form_for(@transfer) do |f| %>
+  From
+  <%= f.collection_select(:from_account_id, @from_accounts, :id, :id_and_user_name_and_balance) %> <br />
+
+  To
+  <%= f.collection_select(:to_account_id, @to_accounts, :id, :id_and_user_name_and_balance) %> <br />
+
+  Amount
+  <%= f.text_field :amount_cents %> <br />
+
+  <%= f.submit %>
+<% end %>

@@ -1,0 +1,10 @@
+<% @transfers.each do |transfer| %>
+  #<%= transfer.id %>
+  from <%= transfer.from_account.user.name %> (<%= transfer.from_account_id %>)
+  to <%= transfer.to_account.user.name %> (<%= transfer.to_account_id %>)
+  with <%= transfer.amount_cents %> cents.
+  <br />
+<% end %>
+
+
+<%= link_to "Create a new transfer", new_transfer_path %>

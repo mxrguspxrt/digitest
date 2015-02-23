@@ -25,7 +25,7 @@ ActiveRecord::Schema.define(version: 20150223003218) do
     t.datetime "updated_at",      null: false
     t.integer  "from_account_id"
     t.integer  "to_account_id"
-    t.integer  "amount"
+    t.integer  "amount_cents"
   end
 
   create_table "users", force: true do |t|
